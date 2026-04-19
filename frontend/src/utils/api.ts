@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = import.meta.env.VITE_API_URL || '/api'
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://plant-disease-production-0813.up.railway.app'
 
 export interface PredictionResult {
   disease: string
