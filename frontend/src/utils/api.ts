@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'https://plant-disease-production-0813.up.railway.app'
+const BASE_URL = 'https://plant-disease-production-0813.up.railway.app'
 
 export interface PredictionResult {
   disease: string
@@ -25,7 +25,6 @@ export async function predictDisease(file: File): Promise<PredictionResult> {
   return response.data
 }
 
-// Mock fallback for demo (when backend is offline)
 export function getMockPrediction(filename: string): PredictionResult {
   const mockDiseases = [
     {
@@ -34,17 +33,16 @@ export function getMockPrediction(filename: string): PredictionResult {
       confidence: 0.956,
       cause: 'Phytophthora infestans (water mold)',
       symptoms: [
-        'Dark, water-soaked lesions on leaves',
-        'White mold on the underside of leaves in humid conditions',
+        'Dark water-soaked lesions on leaves',
+        'White mold on the underside of leaves',
         'Brown-to-black lesions on stems',
         'Rapid collapse of affected tissue',
       ],
       treatment: [
-        'Apply copper-based fungicides (e.g., Bordeaux mixture)',
-        'Remove and destroy infected plant parts immediately',
+        'Apply copper-based fungicides immediately',
+        'Remove and destroy infected plant parts',
         'Improve air circulation by pruning',
-        'Avoid overhead irrigation; water at the base',
-        'Plant resistant varieties in future seasons',
+        'Avoid overhead irrigation',
       ],
       alternatives: [
         { disease: 'Tomato Early Blight', confidence: 0.031 },
@@ -64,7 +62,7 @@ export function getMockPrediction(filename: string): PredictionResult {
         'Reduced fruit quality and yield',
       ],
       treatment: [
-        'Apply myclobutanil or trifloxystrobin fungicides early',
+        'Apply myclobutanil fungicide early in spring',
         'Remove nearby juniper hosts if possible',
         'Plant rust-resistant apple varieties',
         'Prune and destroy infected tissue',
@@ -80,11 +78,16 @@ export function getMockPrediction(filename: string): PredictionResult {
       plant_type: 'Bell Pepper',
       confidence: 0.991,
       cause: 'No pathogen detected',
-      symptoms: ['No visible symptoms of disease', 'Normal leaf coloration and texture'],
-      treatment: ['Continue regular monitoring', 'Maintain good agricultural practices'],
+      symptoms: [
+        'No visible symptoms of disease',
+        'Normal leaf coloration and texture',
+      ],
+      treatment: [
+        'Continue regular monitoring',
+        'Maintain good agricultural practices',
+      ],
       alternatives: [
         { disease: 'Bell Pepper Bacterial Spot', confidence: 0.006 },
-        { disease: 'Nutrient Deficiency', confidence: 0.003 },
       ],
       is_healthy: true,
     },
