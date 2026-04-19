@@ -99,7 +99,7 @@ export default function About() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://github.com/tinh2044/PlantDisease_classification"
+                href="https://github.com/mahadevatishay/plant-disease.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm py-2 px-4"
