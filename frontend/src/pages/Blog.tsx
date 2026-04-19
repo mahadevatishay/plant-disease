@@ -4,9 +4,7 @@ import PageWrapper from '../components/PageWrapper'
 import SectionHeading from '../components/SectionHeading'
 
 const authors = [
-  { name: 'Chhavi Gupta',  affiliation: 'B.E. CSE · Chitkara University', email: 'chhavi1459.be22@chitkara.edu.in' },
-  { name: 'Kanika Gupta',  affiliation: 'B.E. CSE · Chitkara University', email: 'kanika1736.be22@chitkara.edu.in' },
-  { name: 'Kunisha Dhir',  affiliation: 'B.E. CSE · Chitkara University', email: 'kunisha528.be22@chitkara.edu.in' },
+  { name: 'Atishay Jain', email: 'atisheyjain171@gmail.com' }
 ]
 
 const sections = [
@@ -87,7 +85,7 @@ export default function Blog() {
                   </div>
                   <div>
                     <div className="font-semibold text-sm">{a.name}</div>
-                    <div className="text-xs text-[var(--text-secondary)]">{a.affiliation}</div>
+                    {/* <div className="text-xs text-[var(--text-secondary)]">{a.affiliation}</div> */}
                   </div>
                 </div>
               ))}
