@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>LeafScan AI — Plant Disease Classification</title>
+    <meta name="description" content="Real-time plant disease detection powered by EfficientNet-B4. 95.9% accuracy across 22 crop types and 38 disease classes. Built for farmers, powered by deep learning." />
+    <meta name="keywords" content="plant disease, EfficientNet, deep learning, agriculture, leaf classification, AI, TFLite" />
+    <meta name="author" content="Atishay Jain" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="LeafScan AI — Plant Disease Classification" />
+    <meta property="og:description" content="Upload a leaf image and get instant disease diagnosis. EfficientNet-B4 model with 95.9% accuracy." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leafscan.vercel.app" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LeafScan AI" />
+    <meta name="twitter:description" content="AI-powered plant disease detection — 95.9% accuracy, 22 crops, 38 diseases." />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#166534" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Theme init (avoid flash) -->
+    <script>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
