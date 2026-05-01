@@ -61,7 +61,7 @@ export default function Predictor({ compact = false }: Props) {
       setUsedMock(false)
     } catch {
       // Backend unavailable — use mock for demo
-      const mock = getMockPrediction(file.name)
+      const mock = await getMockPrediction(file)
       setResult(mock)
       setUsedMock(true)
     } finally {
