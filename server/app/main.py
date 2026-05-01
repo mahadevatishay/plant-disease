@@ -171,6 +171,21 @@ DISEASE_INFO = {
         ],
         "is_healthy": True,
     },
+    "Healthy Apple": {
+        "plant_type": "Apple",
+        "cause": "No pathogen detected",
+        "symptoms": [
+            "No visible symptoms of disease",
+            "Normal leaf coloration and texture",
+            "No lesions, spots, or abnormal growth",
+        ],
+        "treatment": [
+            "Continue regular crop monitoring",
+            "Maintain good agricultural practices",
+            "Ensure balanced fertilisation and irrigation",
+        ],
+        "is_healthy": True,
+    },
 }
 
 # ── Known demo image filename → disease name ───────────────────────────────
@@ -182,7 +197,7 @@ DEMO_IMAGE_MAP = [
     ("05_grape_black_rot",            "Grape Black Rot"),
     ("06_potato_early_blight",        "Potato Early Blight"),
     ("07_bell_pepper_bacterial_spot", "Bell Pepper Bacterial Spot"),
-    ("08_healthy_apple",              "Healthy"),
+    ("08_healthy_apple",              "Healthy Apple"),
     ("09_tomato_early_blight",        "Tomato Early Blight"),
     ("10_strawberry_leaf_scorch",     "Strawberry Leaf Scorch"),
 ]
